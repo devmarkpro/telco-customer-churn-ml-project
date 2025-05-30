@@ -5,6 +5,7 @@ from sklearn.preprocessing import StandardScaler
 class DataProcessor(Data):
     def __init__(self):
         super().__init__()
+        self.data = None
 
     def process_data(self) -> pd.DataFrame:
         """Process the loaded data."""
@@ -19,6 +20,15 @@ class DataProcessor(Data):
         self._drop_extra_features(df, inplace=True)
 
         return df
+
+    def get_processed_data(self) -> pd.DataFrame:
+        """Return the processed data."""
+        return self.process_data()
+
+    def get_raw_data(self) -> pd.DataFrame:
+        """Return the loaded data."""
+        return self.data
+
 
     def _map_binary_features(self, df: pd.DataFrame, inplace=False) -> pd.DataFrame:
         # Mapping 'Yes'/'No' to 1/0
@@ -58,7 +68,3 @@ class DataProcessor(Data):
         for feature in numeric_features:
             df[feature] = scaler.fit_transform(df[['tenure', 'MonthlyCharges', 'TotalCharges']])
         return df
-
-    def get_processed_data(self) -> pd.DataFrame:
-        """Return the processed data."""
-        return self.process_data()
