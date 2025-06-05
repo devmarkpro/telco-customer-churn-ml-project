@@ -26,22 +26,22 @@ The project follows a structured data science workflow:
 
 ## Project Structure
 
-- **customer_churn_prediction_model_comparison.ipynb**  
+- [**customer_churn_prediction_model_comparison.ipynb**](customer_churn_prediction_model_comparison.ipynb)
   The main notebook that walks through the entire churn prediction pipeline, including EDA, preprocessing, model training, evaluation, and comparison.
 
-- **notebooks/**  
+- [**notebooks/**](notebooks/)  
   Contains modular notebooks, each dedicated to a specific section of the main workflow (e.g., EDA, feature engineering, model training, etc.), for easier navigation and experimentation.
 
-- **data/**  
+- [**data/**](data/)
   - `Telco-Customer-Churn.csv`: The primary dataset used for analysis and modeling.
 
-- **results/**  
+- [**results/**](results/)  
   Stores model metrics (e.g., accuracy, precision, recall, F1-score, ROC-AUC) generated after running the notebooks.
 
-- **final-report.pdf**  
+- [**final-report.pdf**](final-report.pdf)
   The final project report summarizing the methodology, experiments, results, and conclusions.
 
-- **conda-env.yml**  
+- [**conda-env.yml**](conda-env.yml)
   Conda environment file listing all dependencies required to run the notebooks.
 
 ## Getting Started
@@ -53,7 +53,7 @@ The project follows a structured data science workflow:
 ### 2. Clone the Repository
 
 ```bash
-git clone <repo-url>
+git clone git@github.com:devmarkpro/telco-customer-churn-ml-project.git
 cd telco-customer-churn-ml-project
 ```
 
